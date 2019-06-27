@@ -5,7 +5,10 @@ var ordinal = function(digit) {
     var lastDigit = digitNum % 10;
     var lastTwoDigits = digitNum % 100;
 
-    if (lastTwoDigits > 10 && lastTwoDigits < 20) {
+    if (Number(digit) === 0) {
+      return digit + ' is not processable';
+    }
+    else if (lastTwoDigits > 10 && lastTwoDigits < 20) {
       return digit + 'th';
     }
     else if (lastDigit === 1) {
@@ -17,7 +20,7 @@ var ordinal = function(digit) {
     else if (lastDigit === 3) {
       return digit + 'rd';
     }
-    else if (lastDigit !== 0) {
+    else if (lastDigit === 0) {
       return digit + 'th';
     }
     else {
