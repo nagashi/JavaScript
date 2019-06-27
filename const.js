@@ -1,0 +1,7 @@
+// ES6 language
+// If you're using version 7 or greater of node, use node
+// else use babel-node to run the following program.
+// const creates a constant, non-changeable, variable.
+
+const value = "hello";
+value = "goodbye";
